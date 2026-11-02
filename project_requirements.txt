@@ -1,0 +1,44 @@
+======================================================
+PROJECT REQUIREMENTS & SPECIFICATIONS
+LPU Academic Bookstore - Front-End Assignment
+======================================================
+
+1. SYSTEM REQUIREMENTS
+------------------------------------------------------
+This project requires no backend server or package managers. 
+To run or evaluate this project, you only need:
+- A modern web browser (Google Chrome, Mozilla Firefox, Safari, or Microsoft Edge).
+- JavaScript enabled in the browser settings (for cart and filter functionality).
+- Local files extracted to the same directory (HTML, CSS, JS, and image assets).
+
+2. ASSIGNMENT OBJECTIVES FULFILLED
+------------------------------------------------------
+[x] User Interface (UI):
+    - Develop a responsive, multi-page layout (Home, Catalogue).
+    - Implement a clean, academic-themed design system.
+    - Support both Light and Dark visual modes.
+
+[x] Textbook Finder & Filtering (JavaScript):
+    - Filter by Department (Computer Science, Mechanical, Civil, Electronics).
+    - Filter by Semester (1 through 8).
+    - Filter by Category (Textbook, Reference, Lab Manual).
+    - Filter by Price Range using an HTML5 range slider.
+    - Implement a text-based search bar.
+
+[x] Product Features:
+    - Display book specification cards (Title, Author, Semester, Tags).
+    - Offer a "Condition Selector" allowing users to toggle between New and Used books.
+    - Automatically calculate a 40% discount for used books.
+    - Provide an interactive modal/accordion for expanded book details.
+
+[x] Cart System (State Management):
+    - Implement an "Add to Cart" functionality.
+    - Dynamically update the cart item counter in the navigation bar.
+    - Calculate and display total estimated costs.
+    - Persist cart data using browser LocalStorage (no backend database required).
+
+3. TECHNICAL CONSTRAINTS OBSERVED
+------------------------------------------------------
+- Strict use of Vanilla JavaScript (No React, Vue, or jQuery).
+- Strict use of standard CSS (No Bootstrap or Tailwind).
+- All interactions handled on the client-side.

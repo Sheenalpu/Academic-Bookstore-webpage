@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse illustrative engineering book entries by department, semester, category, and price.">
+  <title>Engineering Books | Academic Bookstore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="books">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="LPU Academic Bookstore home">
+        <img class="brand-logo" src="logo.jpeg" alt="Lovely Professional University logo" onerror="this.hidden=true">
+        <span class="brand-copy"><strong>Academic Bookstore</strong><small>LOVELY PROFESSIONAL UNIVERSITY</small></span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">☰</button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="books.html">Engineering Books</a>
+        <a class="nav-link" href="https://lpu.mapmyaccess.com/" target="_blank" rel="noopener noreferrer">LPU E-Resources ↗</a>
+        <a class="nav-link" href="index.html#about">About Project</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">☾ <span>Dark mode</span></button>
+        <button class="button button-small button-outline cart-open" type="button" id="open-cart">Bag <span aria-hidden="true">＋</span> <span class="cart-count" data-cart-count>0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="catalogue-hero">
+      <div class="page-shell catalogue-hero-inner">
+        <div><p class="eyebrow eyebrow-light"><span></span> THE STUDY COLLECTION</p><h1>The book<br><em>collection.</em></h1></div>
+        <div class="catalogue-hero-copy"><p>Find academic resources by department, semester, and subject—all in one place.</p><span class="catalogue-hero-rule"></span><span class="catalogue-note">A curated-looking sample catalogue for a student project.</span></div>
+      </div>
+      <div class="catalogue-hero-mark" aria-hidden="true">A—08</div>
+    </section>
+
+    <section class="catalogue-section page-shell section-pad">
+      <div class="catalogue-heading">
+        <div><p class="eyebrow">FIND YOUR NEXT RESOURCE</p><h2 class="section-title section-title-small">Browse the shelves.</h2></div>
+        <p class="catalogue-helper">Filter by subject, semester, budget, or book condition. Used copies are 40% off.</p>
+      </div>
+
+      <div class="filter-panel">
+        <div class="filter-panel-top"><span class="filter-icon">⌕</span><div><strong>Refine your search</strong><small>Department, semester, category, and budget</small></div><button class="text-button" type="button" id="reset-filters">Reset all ↺</button></div>
+        <div class="filter-grid">
+          <label class="field field-search"><span>Search the collection</span><input type="search" id="book-search" placeholder="Title, author, subject or keyword…" autocomplete="off"></label>
+          <label class="field"><span>Department</span><select id="department-filter"><option value="All">All departments</option><option value="CSE">Computer Science (CSE)</option><option value="ECE">Electronics & Communication (ECE)</option><option value="ME">Mechanical Engineering (ME)</option><option value="CE">Civil Engineering (CE)</option></select></label>
+          <label class="field"><span>Semester</span><select id="semester-filter"><option value="All">All semesters</option><option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3">Semester 3</option><option value="4">Semester 4</option><option value="5">Semester 5</option><option value="6">Semester 6</option><option value="7">Semester 7</option><option value="8">Semester 8</option></select></label>
+          <label class="field"><span>Book category</span><select id="category-filter"><option value="All">All categories</option><option value="Textbook">Textbook</option><option value="Reference">Reference</option><option value="Practical &amp; Lab Manual">Practical &amp; Lab Manual</option></select></label>
+          <label class="field"><span>Book condition</span><select id="condition-filter"><option value="All">New &amp; used</option><option value="new">New books</option><option value="used">Used books · 40% off</option></select></label>
+        </div>
+        <div class="price-filter-row">
+          <div><span class="field-label">Maximum price</span><p class="price-help">Set a budget for the displayed sample prices.</p></div>
+          <div class="price-slider-wrap"><input type="range" id="price-filter" min="100" max="1500" step="50" value="1500" aria-label="Maximum book price"><div class="price-slider-meta"><span>₹100</span><strong id="price-value">Up to ₹1,500</strong><span>₹1,500</span></div></div>
+        </div>
+      </div>
+
+      <div class="catalogue-toolbar"><p id="results-count" aria-live="polite">Loading the collection…</p><label for="sort-filter">Sort by <select id="sort-filter"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="title">Title: A–Z</option></select></label></div>
+      <div class="books-grid" id="books-grid" aria-live="polite"></div>
+      <div class="used-book-note"><strong>♻ Second-hand savings</strong><span>Choose a used copy and save 40% on the listed new-book price.</span></div>
+      <div class="sample-notice"><span aria-hidden="true">ⓘ</span><p><strong>Project note:</strong> Prices and catalogue entries are illustrative sample data for demonstrating front-end functionality. This is not an official LPU catalogue, and checkout/payment are not implemented.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-main">
+      <a class="brand footer-brand" href="index.html"><img class="brand-logo" src="logo.jpeg" alt="" onerror="this.hidden=true"><span class="brand-copy"><strong>Academic Bookstore</strong><small>LOVELY PROFESSIONAL UNIVERSITY</small></span></a>
+      <p>A small digital space for the curious and the studying.</p>
+      <div class="footer-links"><a href="index.html">Home</a><a href="books.html">Engineering Books</a><a href="https://lpu.mapmyaccess.com/" target="_blank" rel="noopener noreferrer">LPU E-Resources</a></div>
+    </div>
+    <div class="page-shell footer-bottom"><span>Student project · Front-end demonstration</span><span>Sample listings are not official university recommendations.</span><a href="#main-content">Back to top ↑</a></div>
+  </footer>
+
+  <div class="modal-backdrop" id="book-modal" hidden>
+    <section class="book-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close book details">×</button>
+      <div id="modal-content"></div>
+    </section>
+  </div>
+
+  <div class="drawer-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="cart-title">Study bag <span class="cart-count" data-cart-count>0</span></h2></div><button class="modal-close" type="button" id="close-cart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cart-items"><p class="cart-empty">Your bag is waiting for its first book.</p></div>
+    <div class="drawer-footer"><div class="cart-total-row"><span>Estimated total</span><strong id="cart-total">₹0</strong></div><p class="checkout-note">Demonstration only. No payment or real order is processed.</p><button class="button button-primary checkout-button" type="button" id="checkout-button">Demo checkout <span aria-hidden="true">→</span></button><button class="clear-cart-button" type="button" id="clear-cart">Clear bag</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

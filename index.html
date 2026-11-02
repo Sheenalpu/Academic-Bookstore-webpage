@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student-built academic bookstore and study-material discovery project for engineering students.">
+  <title>Academic Bookstore | LPU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="LPU Academic Bookstore home">
+        <img class="brand-logo" src="logo.jpeg" alt="Lovely Professional University logo" onerror="this.hidden=true">
+        <span class="brand-copy"><strong>Academic Bookstore</strong><small>LOVELY PROFESSIONAL UNIVERSITY</small></span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">☰</button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="books.html">Engineering Books</a>
+        <a class="nav-link" href="https://lpu.mapmyaccess.com/" target="_blank" rel="noopener noreferrer">LPU E-Resources ↗</a>
+        <a class="nav-link" href="#about">About Project</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">☾ <span>Dark mode</span></button>
+        <a class="button button-small button-primary nav-cta" href="books.html">Browse books <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero hero-home">
+      <div class="hero-shade"></div>
+      <div class="hero-inner page-shell">
+        <p class="eyebrow eyebrow-light"><span></span> A STUDENT-CENTRED LEARNING SPACE</p>
+        <h1>Your next chapter<br><em>begins here.</em></h1>
+        <p class="hero-lede">A thoughtful place to discover engineering textbooks, find your semester essentials, and keep your learning journey moving.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="books.html">Explore the collection <span aria-hidden="true">→</span></a>
+          <a class="text-link text-link-light" href="https://lpu.mapmyaccess.com/" target="_blank" rel="noopener noreferrer">Visit University's digital library <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-note"><span class="hero-note-line"></span><span>Curiosity is a good place to start.</span></div>
+      </div>
+      <div class="hero-caption"><span>LOVELY PROFESSIONAL UNIVERSITY</span><span>LEARN · EXPLORE · GROW</span></div>
+    </section>
+
+    <section class="intro-section section-pad page-shell">
+      <div class="intro-kicker"><span class="eyebrow">THE IDEA</span><span class="fine-line"></span><span class="tiny-index">01 / DISCOVER</span></div>
+      <div class="intro-grid">
+        <h2 class="section-title">Made for the<br><em>curious mind.</em></h2>
+        <div class="intro-copy">
+          <p class="lead-copy">The right resource can make a difficult subject feel a little more approachable.</p>
+          <p>This student-built academic bookstore brings sample engineering book listings, semester browsing, and a simple cart into one calm, easy-to-use space. Explore by discipline, find a starting point, and keep your study resources organised.</p>
+          <a class="underlined-link" href="books.html">Find your next read <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="stat-strip">
+        <div><strong>04</strong><span>Engineering disciplines</span></div>
+        <div><strong>08</strong><span>Semester pathways</span></div>
+        <div><strong>01</strong><span>Place to begin</span></div>
+      </div>
+    </section>
+
+    <section class="departments-section section-pad">
+      <div class="page-shell">
+        <div class="section-heading-row">
+          <div><p class="eyebrow">EXPLORE BY DISCIPLINE</p><h2 class="section-title section-title-small">A field for every <em>kind of thinker.</em></h2></div>
+          <p class="section-side-note">Choose a direction. Let your questions lead.</p>
+        </div>
+        <div class="department-grid">
+          <article class="department-card department-cse">
+            <div class="department-top"><span class="department-symbol">⌘</span><span class="department-number">01</span></div>
+            <p class="card-label">LOGIC · SYSTEMS · SOFTWARE</p><h3>Computer Science<br>& Engineering</h3>
+            <p>From algorithms and code to the systems behind everyday technology.</p>
+            <a class="card-arrow" href="books.html?department=CSE" aria-label="Browse Computer Science books">↗</a>
+          </article>
+          <article class="department-card department-ece">
+            <div class="department-top"><span class="department-symbol">∿</span><span class="department-number">02</span></div>
+            <p class="card-label">SIGNALS · CIRCUITS · DESIGN</p><h3>Electronics &<br>Communication</h3>
+            <p>Explore the circuits, signals, and devices that connect our world.</p>
+            <a class="card-arrow" href="books.html?department=ECE" aria-label="Browse Electronics books">↗</a>
+          </article>
+          <article class="department-card department-me">
+            <div class="department-top"><span class="department-symbol">⚙</span><span class="department-number">03</span></div>
+            <p class="card-label">MOTION · MATERIALS · ENERGY</p><h3>Mechanical<br>Engineering</h3>
+            <p>Understand how machines move, materials behave, and energy works.</p>
+            <a class="card-arrow" href="books.html?department=ME" aria-label="Browse Mechanical Engineering books">↗</a>
+          </article>
+          <article class="department-card department-ce">
+            <div class="department-top"><span class="department-symbol">⌂</span><span class="department-number">04</span></div>
+            <p class="card-label">STRUCTURES · PLACES · PEOPLE</p><h3>Civil<br>Engineering</h3>
+            <p>Discover the principles behind structures and the built environment.</p>
+            <a class="card-arrow" href="books.html?department=CE" aria-label="Browse Civil Engineering books">↗</a>
+          </article>
+        </div>
+        <p class="sample-disclaimer">The catalogue contains illustrative sample entries for this project, not an official LPU prescribed-book list.</p>
+      </div>
+    </section>
+
+    <section class="library-section section-pad page-shell" id="library">
+      <div class="library-panel">
+        <div class="library-art" role="img" aria-label="Illustration of books in a quiet library">
+          <div class="library-window"><span></span><span></span><span></span></div>
+          <div class="book-stack"><i></i><i></i><i></i><i></i></div>
+          <div class="library-plant">♧</div>
+          <span class="art-caption">A LITTLE ROOM FOR BIG IDEAS</span>
+        </div>
+        <div class="library-copy">
+          <p class="eyebrow">BEYOND THE BOOKSHELF</p>
+          <h2 class="section-title">Open a door<br>to the <em>digital library.</em></h2>
+          <p>Look beyond textbooks with the university's digital library portal. Availability and access may depend on your university credentials.</p>
+          <a class="button button-primary" href="https://lpu.mapmyaccess.com/" target="_blank" rel="noopener noreferrer">Visit LPU e-resources <span aria-hidden="true">↗</span></a>
+          <span class="small-note">Opens the external library portal in a new tab.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-section section-pad">
+      <div class="page-shell">
+        <p class="eyebrow">A SIMPLE WAY TO START</p>
+        <h2 class="section-title section-title-small">Three steps. <em>More room to learn.</em></h2>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-number">01</span><div class="step-icon">⌕</div><h3>Choose your department</h3><p>Start with the engineering discipline you want to explore.</p></article>
+          <article class="step-card"><span class="step-number">02</span><div class="step-icon">▤</div><h3>Select your semester</h3><p>Combine department, semester, category, and search filters.</p></article>
+          <article class="step-card"><span class="step-number">03</span><div class="step-icon">＋</div><h3>Build your collection</h3><p>Read book details and add sample items to your demonstration cart.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-pad page-shell" id="about">
+      <div class="about-copy">
+        <p class="eyebrow">ABOUT THIS PROJECT</p>
+        <h2 class="section-title">Built to make discovery<br><em>feel effortless.</em></h2>
+        <p>This is a front-end college project that demonstrates how a simple academic bookstore can help students discover learning resources. It is designed for clarity, responsiveness, and practical interaction—not real purchases.</p>
+        <a class="underlined-link" href="books.html">Explore the working catalogue <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-heading"><span>THE TOOLKIT</span><span class="tech-dot"></span></div>
+        <div class="tech-row"><span class="tech-number">01</span><div><strong>HTML5</strong><small>Structure & semantic content</small></div><span class="tech-mark">⌘</span></div>
+        <div class="tech-row"><span class="tech-number">02</span><div><strong>CSS3</strong><small>Layout, responsive design & motion</small></div><span class="tech-mark">✳</span></div>
+        <div class="tech-row"><span class="tech-number">03</span><div><strong>Vanilla JavaScript</strong><small>Search, filters, theme & cart</small></div><span class="tech-mark">JS</span></div>
+        <div class="tech-row"><span class="tech-number">04</span><div><strong>Browser storage</strong><small>Demo cart and theme preference</small></div><span class="tech-mark">▣</span></div>
+      </div>
+    </section>
+
+    <section class="closing-banner page-shell">
+      <div><p class="eyebrow eyebrow-light">YOUR NEXT CHAPTER AWAITS</p><h2>Start with a question.<br><em>Leave with a direction.</em></h2></div>
+      <a class="button button-cream" href="books.html">Browse the collection <span aria-hidden="true">↗</span></a>
+      <span class="closing-ornament" aria-hidden="true">✳</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-main">
+      <a class="brand footer-brand" href="index.html"><img class="brand-logo" src="logo.jpeg" alt="" onerror="this.hidden=true"><span class="brand-copy"><strong>Academic Bookstore</strong><small>LOVELY PROFESSIONAL UNIVERSITY</small></span></a>
+      <p>A small digital space for the curious and the studying.</p>
+      <div class="footer-links"><a href="index.html">Home</a><a href="books.html">Engineering Books</a><a href="https://lpu.mapmyaccess.com/" target="_blank" rel="noopener noreferrer">LPU E-Resources</a><a href="#about">About Project</a></div>
+    </div>
+    <div class="page-shell footer-bottom"><span>Student project · Front-end demonstration</span><span>Sample listings are not official university recommendations.</span><a href="#main-content">Back to top ↑</a></div>
+  </footer>
+</body>
+</html>
